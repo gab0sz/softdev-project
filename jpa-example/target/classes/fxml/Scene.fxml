@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="751.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.java.fx.example.controller.FXController">
+   <children>
+      <Pane fx:id="searchlayer" prefHeight="751.0" prefWidth="1002.0" style="-fx-background-color: orange;" visible="false">
+         <children>
+            <Button fx:id="backsearch" layoutX="23.0" layoutY="8.0" mnemonicParsing="false" onAction="#backFromSearch" text="Vissza" />
+            <TableView fx:id="table" layoutX="-15.0" layoutY="41.0" prefHeight="716.0" prefWidth="1023.0">
+              <columns>
+                  <TableColumn fx:id="col1" prefWidth="210.39993000030518" text="Picture" />
+                <TableColumn fx:id="col2" prefWidth="149.6000518798828" text="Name" />
+                <TableColumn fx:id="col3" prefWidth="190.4000244140625" text="Registered By" />
+                  <TableColumn fx:id="col4" prefWidth="284.79998779296875" text="Egyéb adatok" />
+                  <TableColumn fx:id="col5" prefWidth="260.0001220703125" text="Elérhetőség" />
+              </columns>
+            </TableView>
+            <TextField fx:id="searchinput" layoutX="280.0" layoutY="8.0" onKeyTyped="#searchSequence" prefHeight="25.0" prefWidth="376.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="registerlayer" prefHeight="751.0" prefWidth="1002.0" style="-fx-background-color: brown;" visible="false">
+         <children>
+            <TextField fx:id="regFullname" layoutX="402.0" layoutY="163.0" />
+            <TextField fx:id="regUsername" layoutX="402.0" layoutY="236.0" />
+            <TextField fx:id="regPassword" layoutX="402.0" layoutY="339.0" />
+            <Label fx:id="reglab1" layoutX="231.0" layoutY="163.0" text="Teljes név" />
+            <Label fx:id="reglab2" layoutX="231.0" layoutY="236.0" text="felhasználónév" />
+            <Label fx:id="reglab3" layoutX="231.0" layoutY="339.0" text="jelszó" />
+            <Button fx:id="regbtn" layoutX="438.0" layoutY="433.0" mnemonicParsing="false" onAction="#registerSequence" text="regisztráció" />
+            <Label fx:id="regerror" layoutX="449.0" layoutY="94.0" />
+            <Button fx:id="regback" layoutX="97.0" layoutY="579.0" mnemonicParsing="false" onAction="#backFromRegister" text="Vissza" />
+         </children>
+      </Pane>
+      <Pane fx:id="loginlayer" prefHeight="751.0" prefWidth="1002.0" style="-fx-background-color: blue;">
+         <children>
+            <TextField fx:id="password" layoutX="428.0" layoutY="322.0" />
+            <Button fx:id="loginbtn" layoutX="435.0" layoutY="376.0" mnemonicParsing="false" onAction="#loginSequence" prefHeight="43.0" prefWidth="131.0" text="Belépés" />
+            <Button fx:id="registerbtn" layoutX="435.0" layoutY="633.0" mnemonicParsing="false" onAction="#choice_register" prefHeight="35.0" prefWidth="124.0" text="Regisztráció" />
+            <Label fx:id="loglab2" layoutX="292.0" layoutY="255.0" prefHeight="17.0" prefWidth="104.0" text="Felhasználónév:" />
+            <Label fx:id="loglab3" layoutX="292.0" layoutY="314.0" prefHeight="17.0" prefWidth="104.0" text="Jelszó:" textAlignment="RIGHT" />
+            <Label fx:id="loglab1" layoutX="440.0" layoutY="601.0" text="Még nem regisztrált?" />
+            <TextField fx:id="username" layoutX="428.0" layoutY="251.0" />
+            <Label fx:id="cantlogin" layoutX="487.0" layoutY="189.0" />
+            <Button fx:id="backbtn1" layoutX="105.0" layoutY="597.0" mnemonicParsing="false" onAction="#backFromLogin" text="Vissza" />
+         </children>
+      </Pane>
+      <Pane fx:id="outerlayer" layoutX="1.0" layoutY="1.0" prefHeight="751.0" prefWidth="1002.0" style="-fx-background-color: green;" visible="false">
+         <children>
+            <Button fx:id="choose1btn" layoutX="600.0" layoutY="401.0" mnemonicParsing="false" onAction="#choice_guest" prefHeight="55.0" prefWidth="148.0" text="Keresés vendégként" translateX="1.0" translateY="1.0" />
+            <Button fx:id="choose2btn" layoutX="123.0" layoutY="401.0" mnemonicParsing="false" onAction="#choice_login" prefHeight="55.0" prefWidth="156.0" text="Jármű feltöltése" />
+         </children>
+      </Pane>
+      <Pane fx:id="addlayer" prefHeight="751.0" prefWidth="1002.0" style="-fx-background-color: purple;" visible="false">
+         <children>
+            <Label fx:id="l1" layoutX="59.0" layoutY="82.0" text="Auto neve:" />
+            <Label fx:id="l2" layoutX="122.0" layoutY="187.0" text="Kép csatolása" />
+            <Button fx:id="browse" layoutX="214.0" layoutY="183.0" mnemonicParsing="false" onAction="#browsefiles" prefHeight="25.0" prefWidth="96.0" text="Tallózás" />
+            <Button fx:id="submitcar" layoutX="420.0" layoutY="641.0" mnemonicParsing="false" onAction="#submitCar" text="Submit" />
+            <TextField fx:id="carInputName" layoutX="136.0" layoutY="78.0" prefHeight="25.0" prefWidth="208.0" />
+            <Label fx:id="errorAtInput" layoutX="188.0" layoutY="14.0" prefHeight="25.0" prefWidth="286.0" />
+            <Button fx:id="backfromadding" layoutX="98.0" layoutY="641.0" mnemonicParsing="false" onAction="#backFromAdding" text="Vissza" />
+            <Label fx:id="l3" layoutX="183.0" layoutY="376.0" text="Elérhetőség" />
+            <Label fx:id="l4" layoutX="380.0" layoutY="31.0" prefWidth="168.0" text="Évjárat" textAlignment="RIGHT" />
+            <Label fx:id="l5" layoutX="380.0" layoutY="70.0" prefWidth="168.0" text="Hengerűrtartalom" textAlignment="RIGHT" />
+            <Label fx:id="l6" layoutX="380.0" layoutY="112.0" prefHeight="17.0" prefWidth="168.0" text="Műszaki vizsga érvényesség" textAlignment="RIGHT" />
+            <Label fx:id="l7" layoutX="380.0" layoutY="145.0" prefWidth="168.0" text="Kilométer óra állása" textAlignment="RIGHT" />
+            <Label fx:id="l8" layoutX="380.0" layoutY="179.0" prefWidth="168.0" text="Ajtók száma" textAlignment="RIGHT" />
+            <Label fx:id="l9" layoutX="380.0" layoutY="209.0" prefWidth="168.0" text="Szín" textAlignment="RIGHT" />
+            <Label fx:id="l10" layoutX="380.0" layoutY="248.0" prefWidth="168.0" text="Tömeg" textAlignment="RIGHT" />
+            <TextField fx:id="evjaratTEXT" layoutX="571.0" layoutY="27.0" onKeyReleased="#evjaratRestrict" />
+            <TextField fx:id="hengerurtartalomTEXT" layoutX="571.0" layoutY="66.0" onKeyReleased="#hengerRestrict" />
+            <TextField fx:id="kilometerTEXT" layoutX="571.0" layoutY="141.0" onKeyReleased="#kilometerRestrict" />
+            <TextField fx:id="ajtokszamaTEXT" layoutX="571.0" layoutY="175.0" onKeyReleased="#ajtokszamaRestrict" />
+            <TextField fx:id="szinTEXT" layoutX="571.0" layoutY="205.0" />
+            <TextField fx:id="tomegTEXT" layoutX="571.0" layoutY="244.0" onKeyReleased="#tomegRestrict" />
+            <TextField fx:id="muszakiTEXT" layoutX="571.0" layoutY="108.0" onKeyReleased="#muszakiRestrict" />
+            <Label fx:id="l11" layoutX="112.0" layoutY="428.0" text="Telefon" />
+            <Label fx:id="l12" layoutX="112.0" layoutY="463.0" text="E-mail" />
+            <TextField fx:id="telefonTEXT" layoutX="171.0" layoutY="424.0" />
+            <TextField fx:id="emailTEXT" layoutX="171.0" layoutY="459.0" />
+         </children></Pane>
+   </children>
+</AnchorPane>

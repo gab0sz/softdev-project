@@ -1,0 +1,11 @@
+BMW 118d,tzoli
+Telefon: 06703588879
+E-mail: tisza.443@gmail.com
+Évjárat: 2008
+Hengerűrtartalom: 1995 cm3
+Műszaki vizsga érvényesség: 2023.04.02.
+Kilométer óra állása: 245000 km
+Ajtók száma: 3
+Szín: fekete
+Tömeg: 1385 kg
+src/img/0pic.jpg
