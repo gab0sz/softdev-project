@@ -38,7 +38,7 @@
             <Button fx:id="regback" layoutX="97.0" layoutY="579.0" mnemonicParsing="false" onAction="#backFromRegister" text="Vissza" />
          </children>
       </Pane>
-      <Pane fx:id="loginlayer" prefHeight="751.0" prefWidth="1002.0" style="-fx-background-color: blue;">
+      <Pane fx:id="loginlayer" prefHeight="751.0" prefWidth="1002.0" style="-fx-background-color: blue;" visible="false">
          <children>
             <TextField fx:id="password" layoutX="428.0" layoutY="322.0" />
             <Button fx:id="loginbtn" layoutX="435.0" layoutY="376.0" mnemonicParsing="false" onAction="#loginSequence" prefHeight="43.0" prefWidth="131.0" text="Belépés" />
@@ -57,7 +57,7 @@
             <Button fx:id="choose2btn" layoutX="123.0" layoutY="401.0" mnemonicParsing="false" onAction="#choice_login" prefHeight="55.0" prefWidth="156.0" text="Jármű feltöltése" />
          </children>
       </Pane>
-      <Pane fx:id="addlayer" prefHeight="751.0" prefWidth="1002.0" style="-fx-background-color: purple;" visible="false">
+      <Pane fx:id="addlayer" prefHeight="751.0" prefWidth="1002.0" style="-fx-background-color: purple;">
          <children>
             <Label fx:id="l1" layoutX="59.0" layoutY="82.0" text="Auto neve:" />
             <Label fx:id="l2" layoutX="122.0" layoutY="187.0" text="Kép csatolása" />
@@ -85,6 +85,8 @@
             <Label fx:id="l12" layoutX="112.0" layoutY="463.0" text="E-mail" />
             <TextField fx:id="telefonTEXT" layoutX="171.0" layoutY="424.0" />
             <TextField fx:id="emailTEXT" layoutX="171.0" layoutY="459.0" />
+            <Button fx:id="tomycars" layoutX="571.0" layoutY="641.0" mnemonicParsing="false" onAction="#toMyCars" text="Autóim" />
          </children></Pane>
+      <Pane fx:id="MyCars" prefHeight="752.0" prefWidth="1003.0" visible="false" />
    </children>
 </AnchorPane>

@@ -42,9 +42,9 @@ public class FXController implements Initializable {
     @FXML
     Label cantlogin,regerror;
     @FXML
-    Pane outerlayer,searchlayer,loginlayer,registerlayer,addlayer;
+    Pane outerlayer,searchlayer,loginlayer,registerlayer,addlayer,myCarslayer,resetpwLayer;
     @FXML
-    Button choose1btn,choose2btn,loginbtn,registerbtn,browse;
+    Button choose1btn,choose2btn,loginbtn,registerbtn,browse,tomycars,backtoaddlayerbtn,backtoaddlayerpwbtn,resetpwbtn;
     @FXML
     AnchorPane anchor;
     @FXML
@@ -646,6 +646,8 @@ public class FXController implements Initializable {
         double sx1=backsearch.getLayoutX(),sx2=table.getLayoutX(),sx3=searchinput.getLayoutX();
         double sy1=backsearch.getLayoutY(),sy2=table.getLayoutY(),sy3=searchinput.getLayoutY();
         double tablescaleX=table.getPrefWidth(),tablescaleY=table.getPrefHeight();
+        double mycX=tomycars.getLayoutX(),mycY=tomycars.getLayoutY();
+        double rpwX=resetpwbtn.getLayoutX(),rpwY=resetpwbtn.getLayoutY();
 
 
 
@@ -723,6 +725,8 @@ public class FXController implements Initializable {
                     searchinput.setLayoutY(sy3*scale);
                     /////////////////////////////////////
                     table.setPrefHeight(tablescaleY*scale);
+                    tomycars.setLayoutY(mycY*scale);
+                    resetpwbtn.setLayoutY(rpwY*scale);
 
 
 
@@ -797,7 +801,8 @@ public class FXController implements Initializable {
                     searchinput.setLayoutX(sx3*scale);
                     ////////////////////////////////////
                     table.setPrefWidth(tablescaleX*scale);
-
+                    tomycars.setLayoutX(mycX*scale);
+                    resetpwbtn.setLayoutX(rpwX*scale);
 
 
 
@@ -812,6 +817,25 @@ public class FXController implements Initializable {
 
 
 
+    }
+
+
+    public void toMyCars()
+    {
+        addlayer.setVisible(false);
+        myCarslayer.setVisible(true);
+    }
+
+    public void backToAddLayer()
+    {
+        resetpwLayer.setVisible(false);
+        myCarslayer.setVisible(false);
+        addlayer.setVisible(true);
+    }
+    public void toresetpw()
+    {
+        addlayer.setVisible(false);
+        resetpwLayer.setVisible(true);
     }
 
 
