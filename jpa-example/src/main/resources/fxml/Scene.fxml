@@ -57,7 +57,7 @@
             <Button fx:id="choose2btn" layoutX="123.0" layoutY="401.0" mnemonicParsing="false" onAction="#choice_login" prefHeight="55.0" prefWidth="156.0" text="Jármű feltöltése" />
          </children>
       </Pane>
-      <Pane fx:id="addlayer" prefHeight="751.0" prefWidth="1002.0" style="-fx-background-color: purple;">
+      <Pane fx:id="addlayer" prefHeight="751.0" prefWidth="1002.0" style="-fx-background-color: purple;" visible="false">
          <children>
             <Label fx:id="l1" layoutX="59.0" layoutY="82.0" text="Auto neve:" />
             <Label fx:id="l2" layoutX="122.0" layoutY="187.0" text="Kép csatolása" />
@@ -86,7 +86,23 @@
             <TextField fx:id="telefonTEXT" layoutX="171.0" layoutY="424.0" />
             <TextField fx:id="emailTEXT" layoutX="171.0" layoutY="459.0" />
             <Button fx:id="tomycars" layoutX="571.0" layoutY="641.0" mnemonicParsing="false" onAction="#toMyCars" text="Autóim" />
+            <Button fx:id="resetpwbtn" layoutX="708.0" layoutY="641.0" mnemonicParsing="false" onAction="#toresetpw" text="Jelszó változtatás" />
          </children></Pane>
-      <Pane fx:id="MyCars" prefHeight="752.0" prefWidth="1003.0" visible="false" />
+      <Pane fx:id="myCarslayer" prefHeight="762.0" prefWidth="1013.0" style="-fx-background-color: yellow;" visible="false">
+         <children>
+            <Button fx:id="backtoaddlayerbtn" layoutX="91.0" layoutY="646.0" mnemonicParsing="false" onAction="#backToAddLayer" text="Vissza" />
+         </children></Pane>
+      <Pane fx:id="resetpwLayer" layoutX="-1.0" layoutY="10.0" prefHeight="752.0" prefWidth="1014.0" style="-fx-background-color: orange;">
+         <children>
+            <Button fx:id="backtoaddlayerpwbtn" layoutX="91.0" layoutY="646.0" mnemonicParsing="false" onAction="#backToAddLayer" text="Vissza" />
+            <Label fx:id="oldpwlab" layoutX="419.0" layoutY="162.0" text="Régi jelszó" />
+            <Label fx:id="newpwlab1" layoutX="424.0" layoutY="248.0" text="Új jelszó" />
+            <Label fx:id="newpwlab2" layoutX="391.0" layoutY="344.0" text="Új jelszó mégegyszer" />
+            <TextField fx:id="oldpw" layoutX="372.0" layoutY="191.0" />
+            <TextField fx:id="newpw1" layoutX="372.0" layoutY="282.0" />
+            <TextField fx:id="newpw2" layoutX="372.0" layoutY="392.0" />
+            <Button fx:id="changePwBTN" layoutX="393.0" layoutY="470.0" mnemonicParsing="false" onAction="#resetPw" text="Jelszó változtatás" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

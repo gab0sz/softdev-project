@@ -83,6 +83,18 @@ public class FXController implements Initializable {
 
 
 
+    @FXML TextField oldpw;
+    @FXML TextField newpw1;
+    @FXML TextField newpw2;
+    @FXML Label oldpwlab;
+    @FXML Label newpwlab1;
+    @FXML Label newpwlab2;
+    @FXML Button changePwBTN;
+
+
+
+
+
 
     public ObservableList list = FXCollections.observableArrayList();
 
@@ -94,6 +106,7 @@ public class FXController implements Initializable {
 
     public void searchSequence()
     {
+
         list.clear();
         table.setItems(list);
          ArrayList<Car> l = new ArrayList<>();
@@ -512,7 +525,48 @@ public class FXController implements Initializable {
 
 
 
+    public void resetPw()
+    {
+        if(!oldpw.getText().equals(UserRepo.findByUsername(currentlogin).getPassword()))
+        {
+            System.out.println("nem megfelelő előző jelszó");
+        }
+        else if(newpw1.getText().length()<8)
+        {
 
+            System.out.println("A megadott jelszó túl rövid");
+        }
+        else if(!newpw1.getText().equals(newpw2.getText()))
+        {
+            System.out.println("A két jelszó nem egyezik");
+        }
+        else
+        {
+            String usr =UserRepo.findByUsername(currentlogin).getName();
+            UserRepo.delete(UserRepo.findByUsername(currentlogin));
+            RegisteredUser tmp = new RegisteredUser();
+            tmp.setPassword(newpw1.getText());
+            tmp.setName(usr);
+            tmp.setUsername(currentlogin);
+            UserRepo.save(tmp);
+            try {
+                FileWriter writer = new FileWriter("src/users.txt");
+                ArrayList<RegisteredUser> ls = new ArrayList<>();
+                ls.addAll((Collection<? extends RegisteredUser>) UserRepo.findAll());
+                for (int i = 0; i < ls.size(); i++) {
+                   
+                    writer.write(ls.get(i).getId()+","+ls.get(i).getName()+","+ls.get(i).getUsername()+","+ls.get(i).getPassword()+"\n");
+                }
+
+
+                writer.close();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
 
 
 
