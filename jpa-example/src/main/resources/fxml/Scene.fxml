@@ -30,16 +30,17 @@
          <children>
             <TextField fx:id="regFullname" layoutX="402.0" layoutY="163.0" />
             <TextField fx:id="regUsername" layoutX="402.0" layoutY="236.0" />
-            <TextField fx:id="regPassword" layoutX="402.0" layoutY="339.0" />
+            <PasswordField fx:id="regPassword" layoutX="402.0" layoutY="344.0" />
             <Label fx:id="reglab1" layoutX="231.0" layoutY="163.0" text="Teljes név" />
             <Label fx:id="reglab2" layoutX="231.0" layoutY="236.0" text="felhasználónév" />
             <Label fx:id="reglab3" layoutX="231.0" layoutY="339.0" text="jelszó" />
             <Button fx:id="regbtn" layoutX="438.0" layoutY="433.0" mnemonicParsing="false" onAction="#registerSequence" text="regisztráció" />
             <Label fx:id="regerror" layoutX="449.0" layoutY="94.0" />
             <Button fx:id="regback" layoutX="97.0" layoutY="579.0" mnemonicParsing="false" onAction="#backFromRegister" text="Vissza" />
+
          </children>
       </Pane>
-      <Pane fx:id="loginlayer" prefHeight="751.0" prefWidth="1002.0" style="-fx-background-color: blue;" visible="true">
+      <Pane fx:id="loginlayer" prefHeight="751.0" prefWidth="1002.0" style="-fx-background-color: blue;" visible="false">
          <children>
             <Button fx:id="loginbtn" layoutX="435.0" layoutY="376.0" mnemonicParsing="false" onAction="#loginSequence" prefHeight="43.0" prefWidth="131.0" text="Belépés" />
             <Button fx:id="registerbtn" layoutX="435.0" layoutY="633.0" mnemonicParsing="false" onAction="#choice_register" prefHeight="35.0" prefWidth="124.0" text="Regisztráció" />
@@ -47,9 +48,10 @@
             <Label fx:id="loglab3" layoutX="292.0" layoutY="314.0" prefHeight="17.0" prefWidth="104.0" text="Jelszó:" textAlignment="RIGHT" />
             <Label fx:id="loglab1" layoutX="440.0" layoutY="601.0" text="Még nem regisztrált?" />
             <TextField fx:id="username" layoutX="428.0" layoutY="251.0" />
+            <PasswordField fx:id="password" layoutX="428.0" layoutY="310.0" />
             <Label fx:id="cantlogin" layoutX="487.0" layoutY="189.0" />
             <Button fx:id="backbtn1" layoutX="105.0" layoutY="597.0" mnemonicParsing="false" onAction="#backFromLogin" text="Vissza" />
-            <PasswordField fx:id="password" layoutX="428.0" layoutY="310.0" />
+
          </children>
       </Pane>
       <Pane fx:id="outerlayer" layoutX="1.0" layoutY="1.0" prefHeight="751.0" prefWidth="1002.0" style="-fx-background-color: green;" visible="false">
@@ -93,16 +95,16 @@
          <children>
             <Button fx:id="backtoaddlayerbtn" layoutX="91.0" layoutY="646.0" mnemonicParsing="false" onAction="#backToAddLayer" text="Vissza" />
          </children></Pane>
-      <Pane fx:id="resetpwLayer" layoutX="-1.0" layoutY="10.0" prefHeight="752.0" prefWidth="1014.0" style="-fx-background-color: orange;" visible="false">
+      <Pane fx:id="resetpwLayer" layoutX="-1.0" layoutY="10.0" prefHeight="752.0" prefWidth="1014.0" style="-fx-background-color: orange;" visible="true">
          <children>
             <Button fx:id="backtoaddlayerpwbtn" layoutX="91.0" layoutY="646.0" mnemonicParsing="false" onAction="#backToAddLayer" text="Vissza" />
             <Label fx:id="oldpwlab" layoutX="419.0" layoutY="162.0" text="Régi jelszó" />
             <Label fx:id="newpwlab1" layoutX="424.0" layoutY="248.0" text="Új jelszó" />
             <Label fx:id="newpwlab2" layoutX="391.0" layoutY="344.0" text="Új jelszó mégegyszer" />
-            <TextField fx:id="oldpw" layoutX="372.0" layoutY="191.0" />
-            <TextField fx:id="newpw1" layoutX="372.0" layoutY="282.0" />
-            <TextField fx:id="newpw2" layoutX="372.0" layoutY="392.0" />
             <Button fx:id="changePwBTN" layoutX="393.0" layoutY="470.0" mnemonicParsing="false" onAction="#resetPw" text="Jelszó változtatás" />
+            <PasswordField fx:id="oldpw" layoutX="373.0" layoutY="192.0" />
+            <PasswordField fx:id="newpw1" layoutX="373.0" layoutY="289.0" />
+            <PasswordField fx:id="newpw2" layoutX="373.0" layoutY="391.0" />
          </children>
       </Pane>
    </children>

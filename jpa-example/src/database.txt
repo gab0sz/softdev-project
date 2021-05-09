@@ -9,3 +9,14 @@ Ajtók száma: 3
 Szín: fekete
 Tömeg: 1385 kg
 src/img/0pic.jpg
+lighning mcqueen,gabosz
+Telefon: +363099999999
+E-mail: valami@valami.com
+Évjárat: 1000
+Hengerűrtartalom: 9999 cm3
+Műszaki vizsga érvényesség: 9999
+Kilométer óra állása: 9999 km
+Ajtók száma: 9999
+Szín: piros
+Tömeg: 9999 kg
+src/img/1pic.jpg
