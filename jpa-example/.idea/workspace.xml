@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4021d985-0984-47ca-868c-d704a0958abc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/database.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/unideb/inf/java/fx/example/controller/FXController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/inf/java/fx/example/controller/FXController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Scene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/users.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Scene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hu/unideb/inf/java/fx/example/controller/FXController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hu/unideb/inf/java/fx/example/controller/FXController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hu/unideb/inf/java/fx/example/controller/FXController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hu/unideb/inf/java/fx/example/controller/FXController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hu/unideb/inf/java/fx/example/controller/FXController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hu/unideb/inf/java/fx/example/controller/FXController.class" afterDir="false" />
-    </list>
+    <list default="true" id="4021d985-0984-47ca-868c-d704a0958abc" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,30 +65,30 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="254" y="84" width="1092" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620556634603">
+    <state x="254" y="84" width="1092" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621449148528">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="254" y="84" width="1092" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1620556634603" />
+    <state x="254" y="84" width="1092" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1621449148528" />
     <state x="580" y="146" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1620556461650">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="146" key="#com.intellij.ide.macro.MacrosDialog/0.0.1600.860@0.0.1600.860" timestamp="1620556461650" />
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1621188708663">
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1621451299715">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1621188708663" />
-    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1621188708662">
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1621451299715" />
+    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1621451299714">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1621188708662" />
-    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1621188708662">
+    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1621451299714" />
+    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1621451299714">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1621188708662" />
-    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1621188708663">
+    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1621451299714" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1621451299714">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1621188708663" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1621451299714" />
     <state x="301" y="74" key="SettingsEditor" timestamp="1620129747519">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
