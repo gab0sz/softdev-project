@@ -42,9 +42,9 @@ public class FXController implements Initializable {
     @FXML
     Label cantlogin,regerror;
     @FXML
-    Pane outerlayer,searchlayer,loginlayer,registerlayer,addlayer,myCarslayer,resetpwLayer;
+    Pane /*outerlayer,*/searchlayer,loginlayer,registerlayer,addlayer,myCarslayer,resetpwLayer,loggedIn;
     @FXML
-    Button choose1btn,choose2btn,loginbtn,registerbtn,browse,tomycars,backtoaddlayerbtn,backtoaddlayerpwbtn,resetpwbtn;
+    Button /*choose1btn,choose2btn,*/loginbtn,registerbtn,browse,tomycars,backtoaddlayerbtn,backtoaddlayerpwbtn,resetpwbtn,logOut;
     @FXML
     AnchorPane anchor;
     @FXML
@@ -339,12 +339,12 @@ public class FXController implements Initializable {
          }
     }
 
-    public void backFromAdding()
+    /*public void backFromAdding()
     {
         addlayer.setVisible(false);
-        outerlayer.setVisible(true);
+        //outerlayer.setVisible(true);
 
-    }
+    }*/
 
 
     public void browsefiles()
@@ -397,7 +397,15 @@ public class FXController implements Initializable {
 
 
 
-
+    @FXML
+    public void logOutSequence(){
+        currentlogin = "";
+        loggedIn.setVisible(false);
+        loginlayer.setVisible(true);
+        resetpwLayer.setVisible(false);
+        addlayer.setVisible(false);
+        myCarslayer.setVisible(false);
+    }
 
 
 
@@ -415,7 +423,10 @@ public class FXController implements Initializable {
                  loginlayer.setVisible(false);
                  addlayer.setVisible(true);
                  currentlogin=person.getUsername();
-
+                 resetpwLayer.setVisible(true);
+                 loggedIn.setVisible(true);
+                 cantlogin.setText("");
+                 myCarslayer.setVisible(true);
              }
              else
              {
@@ -433,26 +444,26 @@ public class FXController implements Initializable {
 
 
     }
-    public void backFromSearch()
+    /*public void backFromSearch()
     {
         searchlayer.setVisible(false);
-        outerlayer.setVisible(true);
-    }
+        //outerlayer.setVisible(true);
+    }*/
     public void backFromRegister()
     {
         registerlayer.setVisible(false);
         loginlayer.setVisible(true);
     }
-     public void backFromLogin()
+     /*public void backFromLogin()
      {
          loginlayer.setVisible(false);
-         outerlayer.setVisible(true);
+         //outerlayer.setVisible(true);
 
-     }
+     }*/
     @FXML
     public void choice_guest()
     {
-        outerlayer.setVisible(false);
+        //outerlayer.setVisible(false);
         searchlayer.setVisible(true);
 
 
@@ -494,15 +505,15 @@ public class FXController implements Initializable {
 
 
     }
-    @FXML
-    public void choice_login()
+    /*@FXML
+    /*public void choice_login()
     {
-        outerlayer.setVisible(false);
+        //outerlayer.setVisible(false);
         loginlayer.setVisible(true);
 
 
 
-    }
+    }*/
 
     public void choice_register()
     {
@@ -658,8 +669,8 @@ public class FXController implements Initializable {
 
 
 
-        outerlayer.prefHeightProperty().bind(anchor.heightProperty());
-        outerlayer.prefWidthProperty().bind(anchor.widthProperty());
+        /*outerlayer.prefHeightProperty().bind(anchor.heightProperty());
+        outerlayer.prefWidthProperty().bind(anchor.widthProperty());*/
         addlayer.prefHeightProperty().bind(anchor.heightProperty());
         addlayer.prefWidthProperty().bind(anchor.widthProperty());
         searchlayer.prefHeightProperty().bind(anchor.heightProperty());
@@ -677,19 +688,19 @@ public class FXController implements Initializable {
         double d1=carInputName.getLayoutX(),d2=evjaratTEXT.getLayoutX(),d3=hengerurtartalomTEXT.getLayoutX(),
                 d4=muszakiTEXT.getLayoutX(),d5=kilometerTEXT.getLayoutX(),d6=ajtokszamaTEXT.getLayoutX(),
                 d7=szinTEXT.getLayoutX(),d8=tomegTEXT.getLayoutX(),d9=telefonTEXT.getLayoutX(),
-                d10=emailTEXT.getLayoutX(),d11=browse.getLayoutX(),d12=backfromadding.getLayoutX(),
+                d10=emailTEXT.getLayoutX(),d11=browse.getLayoutX(),/*d12=backfromadding.getLayoutX(),*/
                 d13=submitcar.getLayoutX();
         double g1=carInputName.getLayoutY(),g2=evjaratTEXT.getLayoutY(),g3=hengerurtartalomTEXT.getLayoutY(),
                 g4=muszakiTEXT.getLayoutY(),g5=kilometerTEXT.getLayoutY(),g6=ajtokszamaTEXT.getLayoutY(),
                 g7=szinTEXT.getLayoutY(),g8=tomegTEXT.getLayoutY(),g9=telefonTEXT.getLayoutY(),
-                g10=emailTEXT.getLayoutY(),g11=browse.getLayoutY(),g12=backfromadding.getLayoutY(),
+                g10=emailTEXT.getLayoutY(),g11=browse.getLayoutY(),/*g12=backfromadding.getLayoutY(),*/
                 g13=submitcar.getLayoutY();
-        double g14=choose1btn.getLayoutY(),g15=choose2btn.getLayoutY(),d14=choose1btn.getLayoutX(),d15=choose2btn.getLayoutX();
+       // double g14=choose1btn.getLayoutY(),g15=choose2btn.getLayoutY(),d14=choose1btn.getLayoutX(),d15=choose2btn.getLayoutX();
         double lx1=username.getLayoutX(),lx2=password.getLayoutX(),lx3=loginbtn.getLayoutX(),lx4=loglab1.getLayoutX(),
-                lx5=loglab2.getLayoutX(),lx6=loglab3.getLayoutX(),lx7=backbtn1.getLayoutX(),lx8=cantlogin.getLayoutX(),
+                lx5=loglab2.getLayoutX(),lx6=loglab3.getLayoutX(),/*lx7=backbtn1.getLayoutX(),*/lx8=cantlogin.getLayoutX(),
                 lx9=registerbtn.getLayoutX();
         double ly1=username.getLayoutY(),ly2=password.getLayoutY(),ly3=loginbtn.getLayoutY(),ly4=loglab1.getLayoutY(),
-                ly5=loglab2.getLayoutY(),ly6=loglab3.getLayoutY(),ly7=backbtn1.getLayoutY(),ly8=cantlogin.getLayoutY(),
+                ly5=loglab2.getLayoutY(),ly6=loglab3.getLayoutY(),/*ly7=backbtn1.getLayoutY(),*/ly8=cantlogin.getLayoutY(),
                 ly9=registerbtn.getLayoutY();
         double rx1=regFullname.getLayoutX(),rx2=regUsername.getLayoutX(),rx3=regPassword.getLayoutX(),rx4=reglab1.getLayoutX(),
                 rx5=reglab2.getLayoutX(),rx6=reglab3.getLayoutX(),rx7=regbtn.getLayoutX(),rx8=regback.getLayoutX(),
@@ -697,8 +708,8 @@ public class FXController implements Initializable {
         double ry1=regFullname.getLayoutY(),ry2=regUsername.getLayoutY(),ry3=regPassword.getLayoutY(),ry4=reglab1.getLayoutY(),
                 ry5=reglab2.getLayoutY(),ry6=reglab3.getLayoutY(),ry7=regbtn.getLayoutY(),ry8=regback.getLayoutY(),
                 ry9=regerror.getLayoutY();
-        double sx1=backsearch.getLayoutX(),sx2=table.getLayoutX(),sx3=searchinput.getLayoutX();
-        double sy1=backsearch.getLayoutY(),sy2=table.getLayoutY(),sy3=searchinput.getLayoutY();
+        //double sx1=backsearch.getLayoutX(),sx2=table.getLayoutX(),sx3=searchinput.getLayoutX();
+        //double sy1=backsearch.getLayoutY(),sy2=table.getLayoutY(),sy3=searchinput.getLayoutY();
         double tablescaleX=table.getPrefWidth(),tablescaleY=table.getPrefHeight();
         double mycX=tomycars.getLayoutX(),mycY=tomycars.getLayoutY();
         double rpwX=resetpwbtn.getLayoutX(),rpwY=resetpwbtn.getLayoutY();
@@ -723,8 +734,8 @@ public class FXController implements Initializable {
 
                 if(scale!=0 )
                 {
-                    choose1btn.setLayoutY(g14*scale);
-                    choose2btn.setLayoutY(g15*scale);
+                    /*choose1btn.setLayoutY(g14*scale);
+                    choose2btn.setLayoutY(g15*scale);*/
                     ////////////////////////////////////
                     l1.setLayoutY(l1Y*scale);
                     l2.setLayoutY(l2Y*scale);
@@ -749,7 +760,7 @@ public class FXController implements Initializable {
                     telefonTEXT.setLayoutY(g9*scale);
                     emailTEXT.setLayoutY(g10*scale);
                     browse.setLayoutY(g11*scale);
-                    backfromadding.setLayoutY(g12*scale);
+                    //backfromadding.setLayoutY(g12*scale);
                     submitcar.setLayoutY(g13*scale);
                    ////////////////////////////////////////////
                     username.setLayoutY(ly1*scale);
@@ -758,7 +769,7 @@ public class FXController implements Initializable {
                     loglab1.setLayoutY(ly4*scale);
                     loglab2.setLayoutY(ly5*scale);
                     loglab3.setLayoutY(ly6*scale);
-                    backbtn1.setLayoutY(ly7*scale);
+                    //backbtn1.setLayoutY(ly7*scale);
                     cantlogin.setLayoutY(ly8*scale);
                     registerbtn.setLayoutY(ly9*scale);
 
@@ -774,9 +785,9 @@ public class FXController implements Initializable {
                     regback.setLayoutY(ry8*scale);
                     regerror.setLayoutY(ry9*scale);
                     ////////////////////////////////////
-                    backsearch.setLayoutY(sy1*scale);
-                    table.setLayoutY(sy2*scale);
-                    searchinput.setLayoutY(sy3*scale);
+                    //backsearch.setLayoutY(sy1*scale);
+                    /*table.setLayoutY(sy2*scale);
+                    /*searchinput.setLayoutY(sy3*scale);*/
                     /////////////////////////////////////
                     table.setPrefHeight(tablescaleY*scale);
                     tomycars.setLayoutY(mycY*scale);
@@ -801,8 +812,8 @@ public class FXController implements Initializable {
 
                 if(scale!=0 )
                 {
-                    choose1btn.setLayoutX(d14*scale);
-                    choose2btn.setLayoutX(d15*scale);
+                    /*choose1btn.setLayoutX(d14*scale);
+                    choose2btn.setLayoutX(d15*scale);*/
                     ////////////////////////////////////////////
                     l1.setLayoutX(l1X*scale);
                     l2.setLayoutX(l2X*scale);
@@ -827,7 +838,7 @@ public class FXController implements Initializable {
                     telefonTEXT.setLayoutX(d9*scale);
                     emailTEXT.setLayoutX(d10*scale);
                     browse.setLayoutX(d11*scale);
-                    backfromadding.setLayoutX(d12*scale);
+                    //backfromadding.setLayoutX(d12*scale);
                     submitcar.setLayoutX(d13*scale);
                     ////////////////////////////////////////////
                     username.setLayoutX(lx1*scale);
@@ -836,7 +847,7 @@ public class FXController implements Initializable {
                     loglab1.setLayoutX(lx4*scale);
                     loglab2.setLayoutX(lx5*scale);
                     loglab3.setLayoutX(lx6*scale);
-                    backbtn1.setLayoutX(lx7*scale);
+                    //backbtn1.setLayoutX(lx7*scale);
                     cantlogin.setLayoutX(lx8*scale);
                     registerbtn.setLayoutX(lx9*scale);
                     ////////////////////////////////////////////
@@ -850,9 +861,9 @@ public class FXController implements Initializable {
                     regback.setLayoutX(rx8*scale);
                     regerror.setLayoutX(rx9*scale);
                     /////////////////////////////////////////
-                    backsearch.setLayoutX(sx1*scale);
-                    table.setLayoutX(sx2*scale);
-                    searchinput.setLayoutX(sx3*scale);
+                    //backsearch.setLayoutX(sx1*scale);
+                    /*table.setLayoutX(sx2*scale);
+                    searchinput.setLayoutX(sx3*scale);*/
                     ////////////////////////////////////
                     table.setPrefWidth(tablescaleX*scale);
                     tomycars.setLayoutX(mycX*scale);
@@ -880,12 +891,12 @@ public class FXController implements Initializable {
         myCarslayer.setVisible(true);
     }
 
-    public void backToAddLayer()
+    /*public void backToAddLayer()
     {
         resetpwLayer.setVisible(false);
         myCarslayer.setVisible(false);
         addlayer.setVisible(true);
-    }
+    }*/
     public void toresetpw()
     {
         addlayer.setVisible(false);

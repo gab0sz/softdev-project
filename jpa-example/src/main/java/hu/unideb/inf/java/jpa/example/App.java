@@ -25,7 +25,7 @@ public class App extends Application {
     private void showStage(Parent root, Stage stage) {
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
-        stage.setTitle("Skeleton Project");
+        stage.setTitle("IT-ERA");
         stage.setScene(scene);
         stage.show();
     }
