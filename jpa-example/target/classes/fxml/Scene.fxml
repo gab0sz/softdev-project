@@ -224,6 +224,20 @@
                   </AnchorPane>
             </content>
           </Tab>
+          <Tab text="Autóim">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: orange;">
+                     <children>
+                        <Text fill="WHITE" layoutX="320.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Folytatáshoz jelentkezz be!" textAlignment="CENTER" wrappingWidth="374.716796875">
+                           <font>
+                              <Font size="64.0" />
+                           </font>
+                        </Text>
+                        <Pane fx:id="myCarslayer" prefHeight="762.0" prefWidth="1013.0" style="-fx-background-color: white;" visible="false" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
             <Tab text="Jelszóváltoztatás">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: orange;">
